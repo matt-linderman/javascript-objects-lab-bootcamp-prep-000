@@ -14,7 +14,8 @@ function destructivelyUpdateObjectWithKeyAndValue(object, key, value) {
 
 function deleteFromObjectByKey(object,key) {
   // non-destructive solution; input object is unchanged
-  var newObject = object
+  // var newObject = object --> incorrect assignment!
+  var newObject = Object.assign({}, object)
   delete newObject[key]
   return newObject
 }
